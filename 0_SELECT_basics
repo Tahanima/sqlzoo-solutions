@@ -1,0 +1,17 @@
+-- Practice link: http://sqlzoo.net/wiki/SELECT_basics
+
+
+-- SQL for Question 01
+SELECT population
+FROM world
+WHERE name = 'Germany';
+
+-- SQL for Question 02
+SELECT name, population
+FROM world 
+WHERE name IN ('Sweden', 'Norway', 'Denmark');
+
+-- SQL for Question 02
+SELECT name, area
+FROM world
+WHERE area BETWEEN 200000 AND 250000;

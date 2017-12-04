@@ -1,0 +1,77 @@
+-- Practice link: http://sqlzoo.net/wiki/SELECT_names
+
+
+-- SQL for Question 01
+SELECT name
+FROM world
+WHERE name LIKE 'Y%';
+
+-- SQL for Question 02
+SELECT name
+FROM world
+WHERE name LIKE '%y';
+
+-- SQL for Question 03
+SELECT name
+FROM world
+WHERE name LIKE '%x%';
+
+-- SQL for Question 04
+SELECT name
+FROM world
+WHERE name LIKE '%land';
+
+-- SQL for Question 05
+SELECT name
+FROM world
+WHERE name LIKE 'C%ia';
+
+-- SQL for Question 06
+SELECT name
+FROM world
+WHERE name LIKE '%oo%';
+
+-- SQL for Question 07
+SELECT name
+FROM world
+WHERE name LIKE '%a%a%a%';
+
+-- SQL for Question 08
+SELECT name
+FROM world
+WHERE name LIKE '_t%';
+
+-- SQL for Question 09
+SELECT name
+FROM world
+WHERE name LIKE '%o__o%';
+
+-- SQL for Question 10
+SELECT name
+FROM world
+WHERE name LIKE '____';
+
+-- SQL for Question 11
+SELECT name
+FROM world
+WHERE name LIKE capital;
+
+-- SQL for Question 12
+SELECT name
+FROM world
+WHERE capital LIKE concat(name, '%City');
+
+-- SQL for Question 13
+SELECT capital, name
+FROM world
+WHERE capital LIKE concat('%', name, '%');
+
+-- SQL for Question 14
+SELECT capital, name
+FROM world
+WHERE capital LIKE concat(name,'%_');
+
+-- SQL for Question 15
+SELECT name, REPLACE(capital, name, '')
+FROM world
+WHERE capital LIKE concat(name, '%_');

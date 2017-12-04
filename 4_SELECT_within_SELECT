@@ -1,0 +1,64 @@
+-- Practice link: http://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial
+
+
+-- SQL for Question 01
+SELECT name
+FROM world
+WHERE population > (SELECT population FROM world WHERE name = 'Russia');
+
+-- SQL for Question 02
+SELECT name
+FROM world
+WHERE continent = 'Europe'
+      AND (gdp/population) > (SELECT gdp/population FROM world WHERE name = 'United Kingdom');
+
+-- SQL for Question 03
+SELECT name, continent
+FROM world
+WHERE continent IN (SELECT continent FROM world WHERE name IN ('Argentina', 'Australia'))
+ORDER BY name;
+
+-- SQL for Question 04
+SELECT name, population
+FROM world
+WHERE population > (SELECT population FROM world WHERE name = 'Canada')
+      AND
+      population < (SELECT population FROM world WHERE name = 'Poland');
+      
+-- SQL for Question 05
+SELECT name, concat(ROUND((population * 100) / (SELECT population FROM world WHERE name = 'Germany'), 0), '%')
+FROM world
+WHERE continent = 'Europe';
+
+-- SQL for Question 06
+SELECT name
+FROM world
+WHERE gdp > ALL (SELECT gdp FROM world WHERE continent = 'Europe' AND gdp IS NOT NULL);
+
+-- SQL for Question 07
+SELECT continent, name, area
+FROM world x
+WHERE x.area >= (SELECT MAX(area) FROM world y WHERE x.continent = y.continent AND population > 0);
+
+-- SQL for Question 08
+SELECT continent, name
+FROM world x
+WHERE name = (SELECT name FROM world y WHERE x.continent = y.continent ORDER BY name LIMIT 1);
+
+-- SQL for Question 09
+SELECT name, continent, population
+FROM world x
+WHERE (SELECT MAX(population) FROM world y WHERE x.continent = y.continent) <= 25000000;
+
+-- SQL for Question 10
+SELECT name, continent
+FROM world x
+WHERE population > 3 * (SELECT population FROM world y WHERE x.continent = y.continent ORDER BY population DESC LIMIT 1,1);
+
+
+
+
+
+
+
+

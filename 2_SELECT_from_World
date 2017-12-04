@@ -1,0 +1,66 @@
+-- Practice link: http://sqlzoo.net/wiki/SELECT_from_WORLD_Tutorial
+
+
+-- SQL for Question 01
+SELECT name, continent, population
+FROM world;
+
+-- SQL for Question 02
+SELECT name
+FROM world
+WHERE population >= 200000000;
+
+-- SQL for Question 03
+SELECT name, gdp/population
+FROM world
+WHERE population >= 200000000;
+
+-- SQL for Question 04
+SELECT name, population/1000000
+FROM world
+WHERE continent = 'South America';
+
+-- SQL for Question 05
+SELECT name, population
+FROM world
+WHERE name IN ('France', 'Germany', 'Italy');
+
+-- SQL for Question 06
+SELECT name
+FROM world
+WHERE name LIKE '%United%';
+
+-- SQL for Question 07
+SELECT name, population, area
+FROM world
+WHERE area > 3000000 OR population > 250000000;
+
+-- SQL for Question 08
+SELECT name, population, area
+FROM world
+WHERE area > 3000000 XOR population > 250000000; 
+
+-- SQL for Question 09
+SELECT name, ROUND(population/1000000, 2), ROUND(gdp/1000000000, 2)
+FROM world
+WHERE continent = 'South America';
+
+-- SQL for Question 10
+SELECT name, ROUND(gdp/population, -3)
+FROM world
+WHERE gdp >= 1000000000000;
+
+-- SQL for Question 11
+SELECT name, capital
+FROM world
+WHERE LENGTH(name) = LENGTH(capital);
+
+-- SQL for Question 12
+SELECT name, capital
+FROM world
+WHERE (LEFT(name, 1) = LEFT(capital, 1)) AND (name != capital); 
+
+-- SQL for Question 13
+SELECT name
+FROM world
+WHERE name NOT LIKE '% %' AND name LIKE '%a%' AND name LIKE '%e%' AND name LIKE '%i%' AND name LIKE '%o%' AND name LIKE '%u%';
