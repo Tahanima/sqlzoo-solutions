@@ -38,6 +38,19 @@ FROM route a JOIN route b ON
 WHERE stopa.name='Craiglockhart' AND stopb.name='London Road';
 
 -- SQL for Question 07
+SELECT DISTINCT a.company, a.num
+FROM route a
+INNER JOIN route b
+ON a.num = b.num
+WHERE (a.stop = 115 AND b.stop = 137) OR (a.stop = 137 AND b.stop = 115);  
+
 -- SQL for Question 08
+SELECT DISTINCT a.company, a.num
+FROM route a
+INNER JOIN route b ON a.num = b.num
+INNER JOIN stops stopa ON (a.stop = stopa.id)
+INNER JOIN stops stopb ON (b.stop = stopb.id)
+WHERE (stopa.name = 'Craiglockhart' AND stopb.name = 'Tollcross') OR (stopa.name = 'Tollcross' AND stopb.name = 'Craiglockhart');
+
 -- SQL for Question 09
 -- SQL for Question 10

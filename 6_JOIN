@@ -2,3 +2,93 @@
 
 
 -- SQL for Question 01
+SELECT matchid, player
+FROM goal 
+WHERE teamid = 'GER';
+
+-- SQL for Question 02
+SELECT DISTINCT id,stadium,team1,team2
+FROM game
+INNER JOIN goal
+ON game.id = goal.matchid
+WHERE id = 1012;
+
+-- SQL for Question 03
+SELECT player, teamid, stadium, mdate
+FROM game 
+INNER JOIN goal 
+ON id = matchid
+WHERE teamid = 'GER';
+
+-- SQL for Question 04
+SELECT team1, team2, player
+FROM game 
+INNER JOIN goal 
+ON id = matchid
+WHERE player LIKE 'Mario%';
+
+-- SQL for Question 05
+SELECT player, teamid, coach, gtime
+FROM goal 
+INNER JOIN eteam
+ON teamid = id 
+WHERE gtime <= 10;
+
+-- SQL for Question 06
+SELECT mdate, teamname
+FROM game
+INNER JOIN eteam
+ON team1 = eteam.id
+WHERE coach LIKE 'Fernando Santos';
+
+-- SQL for Question 07
+SELECT player
+FROM game 
+INNER JOIN goal 
+ON id = matchid
+WHERE stadium LIKE 'National Stadium, Warsaw';
+
+-- SQL for Question 08
+SELECT DISTINCT player
+FROM game 
+INNER JOIN goal 
+ON id = matchid
+WHERE (team1 = 'GER' OR team2 = 'GER') AND (teamid != 'GER');
+
+-- SQL for Question 09
+SELECT teamname, COUNT(player)
+FROM eteam JOIN goal ON id = teamid
+GROUP BY teamname;
+
+-- SQL for Question 10
+SELECT stadium, COUNT(player)
+FROM game 
+INNER JOIN goal 
+ON id = matchid
+GROUP BY stadium;
+
+-- SQL for Question 11
+SELECT matchid, mdate, COUNT(player)
+FROM game 
+INNER JOIN goal 
+ON matchid = id 
+WHERE (team1 = 'POL' OR team2 = 'POL')
+GROUP BY matchid, mdate;
+
+-- SQL for Question 12
+SELECT matchid, mdate, COUNT(player)
+FROM game 
+INNER JOIN goal 
+ON matchid = id 
+WHERE (team1 = 'GER' OR team2 = 'GER') AND teamid = 'GER'
+GROUP BY matchid, mdate;
+
+
+
+
+
+
+
+
+
+
