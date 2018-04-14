@@ -54,11 +54,3 @@ WHERE (SELECT MAX(population) FROM world y WHERE x.continent = y.continent) <= 2
 SELECT name, continent
 FROM world x
 WHERE population > 3 * (SELECT population FROM world y WHERE x.continent = y.continent ORDER BY population DESC LIMIT 1,1);
-
-
-
-
-
-
-
-
