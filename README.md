@@ -3,4 +3,4 @@ This repository contains my solutions of [SQLZOO](https://sqlzoo.net/wiki/SQL_Tu
 
 | SQL Tutorial | Solution |
 | ------------ | -------- |
-|  |  |
+| [SELECT basics](https://sqlzoo.net/wiki/SELECT_basics) | [[Link]](./0_select_basics.md) |
