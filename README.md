@@ -5,3 +5,4 @@ This repository contains my solutions of [SQLZOO](https://sqlzoo.net/wiki/SQL_Tu
 | ------------ | -------- |
 | [SELECT basics](https://sqlzoo.net/wiki/SELECT_basics) | [[Link]](./0_select_basics.md) |
 | [SELECT names](https://sqlzoo.net/wiki/SELECT_names) | [[Link]](./1_select_name.md) |
+| [SELECT from World](https://sqlzoo.net/wiki/SELECT_from_WORLD_Tutorial) | [[Link]](2_select_from_world.md) |
