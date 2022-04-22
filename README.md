@@ -8,3 +8,4 @@ This repository contains my solutions of [SQLZOO](https://sqlzoo.net/wiki/SQL_Tu
 | [SELECT from World](https://sqlzoo.net/wiki/SELECT_from_WORLD_Tutorial) | [[Link]](./2_select_from_world.md) |
 | [SELECT from Nobel](https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial) | [[Link]](./3_select_from_nobel.md) |
 | [SELECT within SELECT](https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial) | [[Link]](./4_select_within_select.md) |
+| [SUM and COUNT](https://sqlzoo.net/wiki/SUM_and_COUNT) | [[Link]](./5_sum_and_count.md) |
