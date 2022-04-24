@@ -92,3 +92,81 @@ FROM   game
          ON ( team1 = eteam.id )
 WHERE  coach = 'Fernando Santos'; 
 ```
+
+7. **List the player for every goal scored in a game where the stadium was 'National Stadium, Warsaw'**
+
+```sql
+SELECT player
+FROM   game
+       JOIN goal
+         ON ( id = matchid )
+WHERE  stadium = 'National Stadium, Warsaw';
+```
+
+8. The example query shows all goals scored in the Germany-Greece quarterfinal.
+
+**Instead show the name of all players who scored a goal against Germany.**
+
+```sql
+SELECT DISTINCT player
+FROM   game
+       JOIN goal
+         ON matchid = id
+WHERE  ( team1 = 'GER'
+          OR team2 = 'GER' )
+       AND goal.teamid <> 'GER'
+ORDER  BY player;
+```
+
+9. **Show teamname and the total number of goals scored.**
+
+```sql
+SELECT teamname,
+       COUNT(player)
+FROM   eteam
+       JOIN goal
+         ON id = teamid
+GROUP  BY teamname;
+```
+
+10. **Show the stadium and the number of goals scored in each stadium.**
+
+```sql
+SELECT stadium,
+       COUNT(matchid)
+FROM   game
+       JOIN goal
+         ON ( id = matchid )
+GROUP  BY stadium;
+```
+
+11. **For every match involving 'POL', show the matchid, date and the number of goals scored.**
+
+```sql
+SELECT matchid,
+       mdate,
+       COUNT(matchid)
+FROM   game
+       JOIN goal
+         ON matchid = id
+WHERE  ( team1 = 'POL'
+          OR team2 = 'POL' )
+GROUP  BY matchid,
+          mdate;
+```
+
+12. **For every match where 'GER' scored, show matchid, match date and the number of goals scored by 'GER'**
+
+```sql
+SELECT matchid,
+       mdate,
+       COUNT(teamid)
+FROM   game
+       JOIN goal
+         ON matchid = id
+WHERE  ( team1 = 'GER'
+          OR team2 = 'GER' )
+       AND goal.teamid = 'GER'
+GROUP  BY matchid,
+          mdate;
+```
