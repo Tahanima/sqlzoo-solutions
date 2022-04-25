@@ -11,3 +11,4 @@ This repository contains my solutions of [SQLZOO](https://sqlzoo.net/wiki/SQL_Tu
 | [SUM and COUNT](https://sqlzoo.net/wiki/SUM_and_COUNT) | [[Link]](./5_sum_and_count.md) |
 | [JOIN](https://sqlzoo.net/wiki/The_JOIN_operation) | [[Link]](./6_join.md) |
 | [More JOIN operations](https://sqlzoo.net/wiki/More_JOIN_operations) | [[Link]](./7_more_join_operations.md) |
+| [Using Null](https://sqlzoo.net/wiki/Using_Null) | [[Link]](./8_using_null.md) |
