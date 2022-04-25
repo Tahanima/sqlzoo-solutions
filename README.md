@@ -12,3 +12,4 @@ This repository contains my solutions of [SQLZOO](https://sqlzoo.net/wiki/SQL_Tu
 | [JOIN](https://sqlzoo.net/wiki/The_JOIN_operation) | [[Link]](./6_join.md) |
 | [More JOIN operations](https://sqlzoo.net/wiki/More_JOIN_operations) | [[Link]](./7_more_join_operations.md) |
 | [Using Null](https://sqlzoo.net/wiki/Using_Null) | [[Link]](./8_using_null.md) |
+| [Self join](https://sqlzoo.net/wiki/Self_join) | [[Link]](./9_self_join.md) |
