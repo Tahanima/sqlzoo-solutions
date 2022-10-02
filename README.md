@@ -13,4 +13,5 @@ This repository contains my solutions of [SQLZOO](https://sqlzoo.net/wiki/SQL_Tu
 | [More JOIN operations](https://sqlzoo.net/wiki/More_JOIN_operations) | [[Link]](./7_more_join_operations.md) |
 | [Using Null](https://sqlzoo.net/wiki/Using_Null) | [[Link]](./8_using_null.md) |
 | [NSS Tutorial](https://sqlzoo.net/wiki/NSS_Tutorial) | [[Link]](./8_numeric_examples.md) |
+| [Window functions](https://sqlzoo.net/wiki/Window_functions) | [[Link]](./9_window_functions.md) |
 | [Self join](https://sqlzoo.net/wiki/Self_join) | [[Link]](./9_self_join.md) |
